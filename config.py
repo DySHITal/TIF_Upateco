@@ -3,3 +3,8 @@ class Config:
     DEBUG = True
     TEMPLATE_FOLDER = "templates/"
     STATIC_FOLDER = "static/"
+
+credenciales = {'user': 'juan',
+                'password': '123456',
+                'host': '127.0.0.1',
+                'database': 'tertulia'}
