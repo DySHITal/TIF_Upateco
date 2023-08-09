@@ -22,8 +22,8 @@
 }
 
 .icono{
-    width: 120em;
-    height: 120em;
+    width: 90em;
+    height: 90em;
     padding: 15em;
 }
 
@@ -40,9 +40,33 @@
 .user{
     height: 10vh;
     background-color: #1a132e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user > h2{
+    font-size: 30em;
+    color: bisque;
 }
 
 .screen{
     background-color: #0e042b;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.screen > p{
+    font-size: 10em;
+    color: bisque;
+}
+
+.screen_empty{
+    height: 40%;
+    width: 30%;
+    border-radius: 50%;
+    opacity: .5;
 }

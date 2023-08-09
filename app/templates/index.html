@@ -13,20 +13,20 @@
     </header>
     <main>
         <section class="gral">
-            <form action="">
+            <form action="{{url_for("login")}}" method="post">
                 <div class="form">
                     <h2>Inicio de Sesión</h2>
                     <div class="row100">
                         <div class="col">
                             <div class="inputBox">
-                                <input type="email" name="" required>
+                                <input type="email" name="email" id="email" required>
                                 <span class="text">Correo Electrónico</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="password" name="" required>
+                                <input type="password" name="password" id="password" required>
                                 <span class="text">Contraseña</span>
                                 <span class="line"></span>
                             </div>

@@ -29,7 +29,6 @@ def create_if_not_exists():
                             correo VARCHAR(100) NOT NULL,
                             contrasena VARCHAR(100) NOT NULL
                         )engine InnoDB;"""
-    create_table2 = """CREATE TABLE IF NOT EXISTS """
     try:
         conn = mysql.connector.connect(user=config.credenciales["user"],
                                        password=config.credenciales["password"],
@@ -37,10 +36,18 @@ def create_if_not_exists():
         cur = conn.cursor()
         cur.execute(create_database)
         cur.execute("USE %s" %config.credenciales["database"])
-        cur.execute(create_table2)
         cur.execute(create_table1)
         conn.commit()
         conn.close()
     except errors.DatabaseError as err:
         print("Error al conectar o crear la base de datos.", err)
         raise
+
+def validar(email, password):
+    query = """SELECT * FROM usuarios WHERE correo=%s AND contrasena=%s"""
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute(query, (email, password))
+    record = cur.fetchone()
+    conn.close()
+    return record
