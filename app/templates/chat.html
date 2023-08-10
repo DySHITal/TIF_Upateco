@@ -11,8 +11,8 @@
     <div class="main">
         <div class="sidebar">
             <ul>
-                <li><img class="icono" src="../static/Añadir_canal.png" alt=""></li>
-                <li><img class="icono" src="../static/Explorar_canal.png" alt=""></li>
+                <li><img class="icono hover" id="add" src="../static/Añadir_canal.png" alt=""></li>
+                <li><img class="icono hover" id="explore" src="../static/Explorar_canal.png" alt=""></li>
             </ul>
             <a href="{{ url_for('logout') }}" class="logout">Salir</a>
         </div>
@@ -24,10 +24,47 @@
             </div>
         </div>
         <div class="screen">
-            <p>Aún no te has unido a un servidor <br>
+            <div id="container_canal">
+                <div class="canal">
+                    <img src="../static/canales/literatura.png" alt="channel" class="canal_img">
+                    <h5>Literatura Fantástica</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/pelicula.png" alt="channel" class="canal_img">
+                    <h5>Locura <br>
+                    Cinematográfica</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/viajes.png" alt="channel" class="canal_img">
+                    <h5>Relatos de <br>
+                    Viajes</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/salud.png" alt="channel" class="canal_img">
+                    <h5>Bienestar y <br>
+                    Salud</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/consola.png" alt="channel" class="canal_img">
+                    <h5>Central de <br>
+                    Juegos</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/deportes.png" alt="channel" class="canal_img">
+                    <h5>Fanáticos del <br>
+                    Deporte</h5>
+                </div>
+                <div class="canal">
+                    <img src="../static/canales/musica.png" alt="channel" class="canal_img">
+                    <h5>Caos <br>
+                    Musical</h5>
+                </div>
+            </div>
+            <p id="empty">Aún no te has unido a un servidor <br>
                 Intenta buscar uno o crea uno propio</p>
         </div>
     </div>
+    <script src="../utils/channels.js"></script>
 </body>
 </html>
 
