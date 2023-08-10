@@ -19,8 +19,7 @@ def init_app():
     
     @app.route('/chat')
     def chat():
-        username = session['email']
-        return render_template('chat.html')
+        return render_template('chat.html', username = session['alias'])
     
     @app.route('/login', methods=['GET', 'POST'])
     def login():
@@ -29,13 +28,32 @@ def init_app():
             email = request.form['email']
             password = request.form['password']
             record = datos.validar(email, password)
+            session['alias'] = record[3]
             if record:
                 session['loggedin'] = True
-                session['email'] = record[5]
+                session['correo'] = record[5]
                 return redirect(url_for('chat'))
             else:
                 msg = 'Nombre de Usuario/Contraseña incorrectos. Prueba de nuevo'
         return render_template('chat.html', msg=msg)
+
+    @app.route('/register', methods=['GET', 'POST'])
+    def register():
+        correo = request.form['email']
+        alias = request.form['alias']
+        nombre = request.form['nombre']
+        apellido = request.form['apellido']
+        contrasena = request.form['password']
+        fec_nac = request.form['date'] 
+        datos.cargar_usuario(nombre, apellido, alias, fec_nac, correo, contrasena)
+        return redirect(url_for('index'))           
+
+    @app.route('/logout')
+    def logout():
+        session.pop('loggedin', None)
+        session.pop('correo', None)
+        session.pop('alias', None)
+        return redirect(url_for('index'))
 
     return app
     

@@ -13,48 +13,48 @@
     </header>
     <main>
         <section class="gral">
-            <form action="">
+            <form action="{{url_for('register')}}" method="POST">
                 <div class="form">
                     <h2>Crear una cuenta</h2>
                     <div class="row100">
                         <div class="col">
                             <div class="inputBox">
-                                <input type="email" name="" required>
+                                <input type="email" name="email" id="email" required>
                                 <span class="text">Correo Electrónico</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" name="" required>
+                                <input type="text" name="alias" id="alias" required>
                                 <span class="text">Nombre de Usuario</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" name="" required>
+                                <input type="text" name="nombre" id="nombre" required>
                                 <span class="text">Nombre</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" name="" required>
+                                <input type="text" name="apellido" id="apellido" required>
                                 <span class="text">Apellido</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="password" name="" required>
+                                <input type="password" name="password" id="password" required>
                                 <span class="text">Contraseña</span>
                                 <span class="line"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="date" name="" required>
+                                <input type="date" name="date" id="date" required>
                                 <span class="text1">Fecha de nacimiento</span>
                                 <span class="line"></span>
                             </div>

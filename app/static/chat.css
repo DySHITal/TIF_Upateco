@@ -51,7 +51,9 @@
 }
 
 .screen{
-    background-color: #0e042b;
+    background-image: url(../static/vacio.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -60,13 +62,14 @@
 }
 
 .screen > p{
-    font-size: 10em;
+    font-size: 20em;
     color: bisque;
 }
 
-.screen_empty{
-    height: 40%;
-    width: 30%;
-    border-radius: 50%;
-    opacity: .5;
+.logout{
+    text-decoration: none;
+    position: absolute;
+    font-size: 10em;
+    bottom: 10px;
+    color: bisque;
 }

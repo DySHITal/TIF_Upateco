@@ -51,3 +51,12 @@ def validar(email, password):
     record = cur.fetchone()
     conn.close()
     return record
+
+def cargar_usuario(nombre, apellido, alias, fec_nac, correo, password):
+    query = """insert into usuarios(nombre, apellido, alias, fechas_nacimiento, correo, contrasena)
+               values(%s, %s, %s, %s, %s, %s);"""
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute(query, (nombre, apellido, alias, fec_nac, correo, password))
+    conn.commit()
+    conn.close()

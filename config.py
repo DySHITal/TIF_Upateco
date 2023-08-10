@@ -7,4 +7,4 @@ class Config:
 credenciales = {'user': 'juan',
                 'password': '123456',
                 'host': '127.0.0.1',
-                'database': 'tertulia'}
+                'database': 'tertulia2'}

@@ -14,18 +14,18 @@
                 <li><img class="icono" src="../static/Añadir_canal.png" alt=""></li>
                 <li><img class="icono" src="../static/Explorar_canal.png" alt=""></li>
             </ul>
+            <a href="{{ url_for('logout') }}" class="logout">Salir</a>
         </div>
         <div class="section">
             <div class="msgs"></div>
             <div class="user">
                 <img src="../static/user_default.png" alt="" class="icono">
-                <h2>User</h2>
+                <h2>{{username}}</h2>
             </div>
         </div>
         <div class="screen">
             <p>Aún no te has unido a un servidor <br>
                 Intenta buscar uno o crea uno propio</p>
-            <img class="screen_empty" src="../static/empty.jpg" alt="">
         </div>
     </div>
 </body>
